@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none
+}
+@keyframes fadeout {
+	0% {
+		opacity: 1;
+        visibility: visible;
+	}
+
+	100% {
+		opacity: 0;
+        visibility: hidden;
+	}
+}
+#canvas {
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+}
+.programrect {
+    background-color: rgb(0, 102, 255);
+    width: 40vh;
+    height: 40vh;
+    border-radius: 5vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .5s;
+    opacity: 70%;
+}
+.programrect:before {
+    background-color: rgb(255, 197, 60);
+    width: 40vh;
+    height: 40vh;
+    border-radius: 5vh;
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+.programrect:hover {
+    top:52%;
+    transition: 0.5s;
+    cursor:pointer;
+}
+h1 {
+    font-family:'Trebuchet MS',Arial, sans-serif;
+    font-size: 5vh;
+    color:rgb(255, 255, 255);
+}
+#loading-mask {
+    background-color: rgb(0, 0, 0);
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+.disapear {
+    animation: fadeout 1s ease 0s 1 normal forwards;
+}
+h2 {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 3vh;
+    color:rgb(255, 255, 255);
+}
+.buttonsacutal {
+    padding: 0.25em 0.35em;
+    border-radius: 3vh;
+    margin-left: 4vh;
+    margin-right: 4vh;
+    color:rgb(230, 230, 255);
+    background-color:midnightblue;
+    cursor: pointer;
+    white-space:nowrap;
+    font-family: 'Trebuchet MS',Arial, sans-serif;
+    font-size: 2vh;
+    position:absolute;
+}
+
+.buttonsacutal:hover {
+    background-color: black;
+    transition: 0.5s;
+}

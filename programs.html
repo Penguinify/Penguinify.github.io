@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>penguinify</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="programs.css">
+    </head>
+    <body>
+        <div id="canvas", style="background-color:rgb(0, 7, 13)"></div>
+
+        <div class="programrect" id="pycro">
+            <h1 style="display: flex;justify-content: center;">Pycro</h1>
+            <h2 style="display: flex;justify-content: center;text-align:center">Pycro is a free open-source alternative to shady macros.</h2>
+            <a href="https://github.com/Penguinify/pycro/releases/tag/Beta" target="_blank"><b class="buttonsacutal" style="bottom:3vh">download latest</b></a>
+            <a href="https://github.com/Penguinify/pycro/" target="_blank"><b class="buttonsacutal" style="bottom:3vh;margin-left:23vh">view source</b></a>
+        </div>
+
+        <div id="loading-mask"></div>
+
+        <script src="" async defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r120/three.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.19/vanta.waves.min.js"></script>
+        <script src="programs.js"></script>
+        <script>
+            VANTA.WAVES({
+                el: "#canvas",
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                minHeight: 200.00,
+                minWidth: 200.00,
+                scale: 0.50,
+                scaleMobile: 1.00,
+                color: 0x49a7,
+                shininess: 150.00,
+                waveHeight: 20.00,
+                waveSpeed: 1.20,
+                zoom: 0.70
+                })
+        </script>
+        <script type="text/javascript">
+            const pycro = document.getElementById('pycro')
+            window.onload=function() {
+                document.getElementById('loading-mask').classList.add('disapear');
+            }
+        </script>
+    </body>
+</html>
