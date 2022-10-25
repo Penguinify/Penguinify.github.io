@@ -24,41 +24,38 @@
             <p class="faqbody" style="top:83vh;">Antartica.</p>
             <img src="assets/back.png", class="faqbody", style="left:-40%;top:50%;transform:translate(-40%,50%);cursor:pointer;", onclick="backtransition()">
         </div>
-        <div id="vanta-canvas"></div>
-            <h1 id="title" class="jelloanim">Penguinify</h1>
-            <span id="buttonslmao">
-                <b class="buttonsacutal" id='aboutbutton'onclick="abouttransition()">faq</b>
-                <a href='programs.html', style="text-decoration: none;"><b class="buttonsacutal">programs</b></a>
-                <b class="buttonsacutal">other</b>
-            </span>
-        </div>
+        <canvas id="main-center"></canvas>
+        <h1 id="title">Penguinify</h1>
+        <span id="buttonslmao">
+            <b class="buttonsacutal" id='aboutbutton'onclick="abouttransition()">faq</b>
+            <a href='programs.html', style="text-decoration: none;"><b class="buttonsacutal">programs</b></a>
+            <b class="buttonsacutal">other</b>
+        </span>
 
         <div id="loading-mask"></div>
 
     </body>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r120/three.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.19/vanta.waves.min.js"></script>
     <script src="index.js"></script>
+    <script src="https://unpkg.com/starback@2.1.1/dist/starback.global.js"></script>
     <script>
-        VANTA.WAVES({
-            el: "#vanta-canvas",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            scale: 0.50,
-            scaleMobile: 1.00,
-            color: 0x49a7,
-            shininess: 150.00,
-            waveHeight: 20.00,
-            waveSpeed: 1.20,
-            zoom: 0.70
-            })
-    </script>
+        const canvas = document.getElementById('main-center')
+        const starback = new Starback(canvas, {
+            type: 'line',
+            width: document.body.clientWidth,
+            height: document.body.clientHeight,
+            directionY: 1,
+            slope: {x:1,y:1},
+            quantity: 100,
+            starSize: 200,
+            spread: 2,
+            backgroundColor: ['#171717','#0d0d0d'],
+            starColor: ['#00eeff','#0004ff','#ff00ea']
+        })
+      </script>
     <script type="text/javascript">
         window.onload=function() {
             document.getElementById('loading-mask').classList.add('disapear');
+            document.getElementById('title').classList.add('jelloanim')
         }
     </script>      
 </html>

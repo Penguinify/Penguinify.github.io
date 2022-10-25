@@ -1,6 +1,7 @@
 let aboutbutton = document.getElementById('aboutmesection');
 const faqtexr = document.getElementsByClassName('faqheaders');
 const faqbody = document.getElementsByClassName('faqbody');
+const titleText = document.getElementById('title')
 let mask = document.getElementById('loading-mask');
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -24,3 +25,8 @@ async function backtransition() {
         faqbody[i].classList.remove('animateleftslide')
     }
 }
+document.addEventListener("mousemove", () => {
+    let mousey = event.clientY;
+    let mousex = event.clientX;
+    titleText.style.color = 'rgb(' + String(128 - mousey / 12) + ',64,' + String(255 -mousex/10) + ')'
+  });

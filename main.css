@@ -12,26 +12,39 @@
 }
 
 .jelloanim {
-    animation: anim 2s ease 0s normal none;
+    animation: animent2 3s ease 0s normal forwards;
     overflow: hidden;
     white-space: nowrap;
 }
 
-@keyframes anim {
-    0% {
-        width: 0vh;
-        opacity: 0;
-        border-right: 5vh;
+@keyframes animent1 {
+	0% {
+        color:rgb(170, 239, 255);
+	}
 
+	33% {
+        color:rgb(148, 155, 255)
+	}
+
+    66% {
+        color:rgb(253, 162, 255)
     }
 
-    100%{
-        opacity: 1;
-        width: 60.43vh;
-        overflow: show;
-        border-right: 0vh;
+    100% {
+        color:rgb(170, 239, 255)
+    }
+
+}
+
+@keyframes animent2 {
+    0% {
+        transform:rotateX(180deg);
+    }
+
+    100% {
     }
 }
+
 @keyframes fadeout {
 	0% {
 		opacity: 1;
@@ -51,7 +64,7 @@
 	}
 
 	100% {
-		transform: scaleX(1900);
+		transform: scaleX(10000);
 		transform-origin: 0% 0%;
 	}
 }
@@ -68,17 +81,16 @@
 	}
 }
 
-#vanta-canvas {
+#main-center {
     width: 100vw;
     height: 101vh;
-    z-index: 0;
+    z-index: 10;
 }
 #title {
-    font-family: 'Raleway', sans-serif;  
+    font-family: 'Raleway', sans-serif;
     position: fixed;
     font-size:13vh;
-    color:aliceblue;
-    mix-blend-mode: overlay;
+    opacity: 0.5;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -40%);
@@ -121,7 +133,7 @@
     z-index: 100;
 }
 .animateleft {
-    animation: aboutsection 2s ease 0s 1 normal forwards;
+    animation: aboutsection 5s ease 0s 1 normal forwards;
 }
 .animateleftslide {
     animation: slide 2s ease 0s 1 normal forwards;
