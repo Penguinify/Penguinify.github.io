@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>penguinify</title>
+        <meta name="description" content="websites only for cool penguins">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="programs.css">
+        <link rel="icon" type="image/png" href="assets/PenguinifyFavicon.png"/>
+    </head>
+    <body>
+        <canvas id="canvas"></canvas>
+
+        <span style="width:100%;height:100%">
+        <button>Home</button>
+        </span>
+        <h1>HELLO</h1>
+
+        <div id="loading-mask"></div>
+
+    </body>
+
+    <script src="https://unpkg.com/starback@2.1.1/dist/starback.global.js"></script>
+    <script>
+        const canvas = document.getElementById('canvas')
+        const starback = new Starback(canvas, {
+            type: 'line',
+            width: document.body.clientWidth,
+            height: document.body.clientHeight,
+            directionY: 1,
+            slope: {x:1,y:1},
+            quantity: 100,
+            starSize: 200,
+            spread: 2,
+            backgroundColor: ['#171717','#0d0d0d'],
+            starColor: ['#00eeff','#0004ff','#ff00ea']
+        })
+      </script>
+
+    <script type="text/javascript">
+        const pycro = document.getElementById('pycro')
+        window.onload=function() {
+            document.getElementById('loading-mask').classList.add('disapear');
+        }
+    </script>
+
+</html>
