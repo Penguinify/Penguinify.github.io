@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="programs.css">
+        <link rel="icon" type="image/png" href="../assets/PenguinifyFavicon.png"/>
+    </head>
+    <body>
+        <canvas id="canvas"></canvas>
+
+        <h1 id="title">lets play a game</h1>
+
+        <span id="buttonslmao">
+            <a href="../index.html" style="text-decoration:none;color:white; "><button style="background: linear-gradient(127deg, rgba(0,108,31,1) 0%, rgba(0,97,59,1) 50%, rgba(0,74,97,1) 100%);">Home <br> <p style="font-size:2vh">lets get back to were we started</p></button></a>
+            <a href="retrobowl.html" style="text-decoration:none;color:white"><button style="background: linear-gradient(127deg, rgba(108,0,0,1) 0%, rgba(120,120,120,1) 50%, rgba(0,35,97,1) 100%);background-size:100%">Retrobowl <br> <p style="font-size:2vh">A football simulator with retro graphics.</p></button></a>
+        </span>
+
+        <script src="https://unpkg.com/starback@2.1.1/dist/starback.global.js"></script>
+        <script>
+            const canvas = document.getElementById('canvas')
+            const starback = new Starback(canvas, {
+                type: 'line',
+                width: document.body.clientWidth,
+                height: document.body.clientHeight,
+                directionY: 1,
+                slope: {x:1,y:1},
+                quantity: 100,
+                starSize: 200,
+                spread: 2,
+                backgroundColor: ['#171717','#0d0d0d'],
+                starColor: ['#00eeff','#0004ff','#ff00ea']
+            })
+          </script>
+    
+        <script type="text/javascript">
+            const pycro = document.getElementById('pycro')
+            window.onload=function() {
+                document.getElementById('loading-mask').classList.add('disapear');
+            }
+        </script>
+    </body>
+</html>
