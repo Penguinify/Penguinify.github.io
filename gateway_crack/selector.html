@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>penguinify</title>
+        <meta name="description" content="penguinify">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="programs.css">
+        <link rel="icon" type="image/png" href="../assets/PenguinifyFavicon.png"/>
+    </head>
+    <body>
+        <canvas id="canvas"></canvas>
+
+        <h1 id="title">lets play a game</h1>
+
+        <span id="buttonslmao" style="top:65%">
+            <a href="../index.html" style="text-decoration:none;color:white; "><button style="background: linear-gradient(127deg, rgba(0,108,31,1) 0%, rgba(0,97,59,1) 50%, rgba(0,74,97,1) 100%);">Home <br> <p style="font-size:2vh">lets get back to were we started</p></button></a>
+            <a href="clumsybird/index.html" style="text-decoration:none;color:white"><button style="background: linear-gradient(127deg, rgba(0,234,255,1) 0%, rgba(28,154,0,1) 50%, rgba(0,255,31,1) 100%);background-size:100%">birb sim <br> <p style="font-size:2vh">open source flappy bird</p></button></a>
+            <a href="hextris/index.html" style="text-decoration:none;color:white"><button style="background: linear-gradient(127deg, rgba(255,0,0,1) 0%, rgba(0,230,255,1) 37%, rgba(230,255,0,1) 70%, rgba(0,255,27,1) 100%);background-size:100%">hextris <br> <p style="font-size:2vh">hexagon and colors. 10/10 copy and pasting</p></button></a>
+            <br>
+            <a href="radiusraid/min.html" style="text-decoration:none;color:white"><button style="background: linear-gradient(127deg, rgba(0,27,43,1) 0%, rgba(3,34,0,1) 51%, rgba(45,0,0,1) 100%);background-size:100%; margin-top: 1vh;">Radius Raid <br> <p style="font-size:2vh">top down shoot em up game.</p></button></a>
+            <a href="td/index.html" style="text-decoration:none;color:white"><button style="background: linear-gradient(127deg, rgba(255,0,0,1) 33%, rgba(0,255,6,1) 69%);background-size:100%; margin-top: 1vh;">towerdefence <br> <p style="font-size:2vh">Simple TD game</p></button></a>
+            <a href="starcatcher/index.html" style="text-decoration:none;color:white"><button style="background-image: linear-gradient( 99.9deg, rgba(27,24,31,1) 21.2%, rgba(50,4,89,1) 84.8% );background-size:100%; margin-top: 1vh;">Star Catcher <br> <p style="font-size:2vh">2d Puzzle Platformer (Use x for Input)</p></button></a>
+            <br><a href="https://forms.gle/QQQUvPa3WSjYDBHe7" target="_blank" style="text-decoration:none;color:white;"><button style="background-size:100%; margin-top: 1vh;">Suggest Games -><br> <p style="font-size:1.75vh; text-align:center">I will only add open source games to not get taken down.</p></button></a>
+
+        </span>
+        <script src="https://unpkg.com/starback@2.1.1/dist/starback.global.js"></script>
+        <script>
+            const canvas = document.getElementById('canvas')
+            const starback = new Starback(canvas, {
+                type: 'line',
+                width: document.body.clientWidth,
+                height: document.body.clientHeight,
+                directionY: 1,
+                slope: {x:1,y:1},
+                quantity: 100,
+                starSize: 200,
+                spread: 2,
+                backgroundColor: ['#171717','#0d0d0d'],
+                starColor: ['#00eeff','#0004ff','#ff00ea']
+            })
+          </script>
+    
+        <script type="text/javascript">
+            const pycro = document.getElementById('pycro')
+            window.onload=function() {
+                document.getElementById('loading-mask').classList.add('disapear');
+            }
+        </script>
+    </body>
+</html>
